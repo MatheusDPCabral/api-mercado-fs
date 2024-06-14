@@ -10,5 +10,9 @@ document.getElementById('productForm').addEventListener('submit', function(event
     if (price <= 0) {
         event.preventDefault();
         alert('O preço deve ser maior que zero.');
+    }    
+    if (stock <= 0) {
+        event.preventDefault();
+        alert('a quantidade deve ser maior que zero.');
     }
 });
