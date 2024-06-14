@@ -1,0 +1,16 @@
+{
+    "products": [
+      {
+        "name": "banana",
+        "price": "-5",
+        "stock": "1",
+        "id": 1
+      },
+      {
+        "name": "teste",
+        "price": "2",
+        "stock": "42",
+        "id": 2
+      }
+    ]
+  }
