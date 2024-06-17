@@ -13,7 +13,9 @@
         <h1 class="center-align"><%= title %></h1>
         <a class="btn waves-effect waves-light" href="/products/new">Adicionar Produto</a>
         <br><br>
-        <table class="striped">
+        <input id="input-busca" type="text" class="form-control mt-3 mb-3" placeholder="O que você procura?">
+        <br><br>
+        <table class="striped highlight responsive-table">
             <thead>
                 <tr>
                     <th class="center-align">ID</th>
@@ -23,7 +25,7 @@
                     <th class="center-align">Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tabela-produtos">
                 <% products.forEach(product => { %>
                     <tr>
                         <td class="center-align"><%= product.id %></td>
@@ -60,6 +62,32 @@
         document.addEventListener('DOMContentLoaded', function() {
             M.AutoInit();
         });
+        const INPUT_BUSCA = document.getElementById('input-busca');
+const TABELA_PRODUTOS = document.getElementById('tabela-produtos');
+
+INPUT_BUSCA.addEventListener('keyup', () => {
+    let expressao = INPUT_BUSCA.value.toLowerCase();
+
+    if (expressao.length === 1) {
+        return;
+    }
+
+    let linhas = TABELA_PRODUTOS.getElementsByTagName('tr');
+
+    for (let posicao in linhas) {
+        if (true === isNaN(posicao)) {
+            continue;
+        }
+
+        let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
+
+        if (true === conteudoDaLinha.includes(expressao)) {
+            linhas[posicao].style.display = '';
+        } else {
+            linhas[posicao].style.display = 'none';
+        }
+    }
+});
     </script>
 </body>
 </html>
