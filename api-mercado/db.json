@@ -2,21 +2,27 @@
   "products": [
     {
       "name": "banana",
-      "price": "-5",
+      "price": "R$ 50.00",
       "stock": "1",
       "id": "1"
     },
     {
-      "name": "teste",
-      "price": "2",
-      "stock": "42",
-      "id": "2"
+      "name": "pera",
+      "price": "R$ 10.00",
+      "stock": "5",
+      "id": "MpzFGi6"
     },
     {
-      "id": "cdd4",
-      "name": "Carne Suína ",
-      "price": "29",
-      "stock": "1"
+      "name": "carro",
+      "price": "R$ 25.00",
+      "stock": "5",
+      "id": "A1cdokm"
+    },
+    {
+      "name": "mawd",
+      "price": "R$ 23.00",
+      "stock": "5",
+      "id": "YTGfr8a"
     }
   ]
 }

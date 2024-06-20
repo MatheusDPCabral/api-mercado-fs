@@ -6,6 +6,9 @@
     <!-- Importando o Materialize CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -20,7 +23,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="price" type="number" class="validate" name="price" value="<%= product ? product.price : '' %>" required>
+                        <input id="price" type="text" class="validate" name="price" value="<%= product ? product.price : '' %>" required>
                         <label for="price">Preço</label>
                     </div>
                     <div class="input-field col s6">
@@ -37,9 +40,29 @@
             </form>
         </div>
     </div>
-
+    
+    <!-- Adicione este script ao seu arquivo HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Importando o Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/javascripts/validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit(); // Inicializando componentes do Materialize
+
+            // Aplicando máscara de preço no formulário
+            $('#price').inputmask('currency', {
+                prefix: 'R$ ',
+                groupSeparator: '.',
+                decimalSeparator: ',',
+                allowMinus: false,
+                rightAlign: false,
+                autoGroup: true,
+                digits: 2,
+                digitsOptional: false,
+                placeholder: '0'
+            });
+        });
+    </script>
 </body>
 </html>

@@ -8,21 +8,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+
 </head>
 <body>
     <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-    
-          <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/logout">Logout</a></li> <!-- Adicionando o link de logout -->
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+                <li><a href="/logout">Logout</a></li> <!-- Adicionando o link de logout -->
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
-      </nav>
+    </nav>
     <div class="container">
         <h1 class="center-align"><%= title %></h1>
         <a class="btn waves-effect waves-light" href="/products/new">Adicionar Produto</a>
@@ -32,7 +35,6 @@
         <table class="striped highlight responsive-table">
             <thead>
                 <tr>
-                    <th class="center-align">ID</th>
                     <th class="center-align">Nome</th>
                     <th class="center-align">Preço</th>
                     <th class="center-align">Quantidade</th>
@@ -42,7 +44,6 @@
             <tbody id="tabela-produtos">
                 <% products.forEach(product => { %>
                     <tr>
-                        <td class="center-align"><%= product.id %></td>
                         <td class="center-align"><%= product.name %></td>
                         <td class="center-align"><%= product.price %></td>
                         <td class="center-align"><%= product.stock %></td>
@@ -56,7 +57,8 @@
         </table>
     </div>
 
-
+    <!-- Adicione este script ao seu arquivo HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Importando o Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
@@ -103,6 +105,31 @@ INPUT_BUSCA.addEventListener('keyup', () => {
         }
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit(); // Inicializando componentes do Materialize
+
+            // Aplicando máscara de preço na tabela
+            const precosNaTabela = document.querySelectorAll('#tabela-produtos td:nth-child(3)');
+            precosNaTabela.forEach(preco => {
+                let valorFormatado = preco.textContent.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                preco.textContent = valorFormatado.replace('.', ','); // Remover 'R$ ' daqui
+            });
+
+            // Aplicando máscara de preço ao digitar no campo do formulário
+            $('#price').inputmask('currency', {
+                prefix: 'R$ ',
+                groupSeparator: '.',
+                decimalSeparator: ',',
+                allowMinus: false,
+                rightAlign: false,
+                autoGroup: true,
+                digits: 2,
+                digitsOptional: false,
+                placeholder: '0'
+            });
+        });
     </script>
 </body>
 </html>
