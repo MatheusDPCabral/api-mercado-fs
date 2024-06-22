@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - SuperMarket Plus</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .login-container {
+            margin-top: 100px;
+        }
+        .navbar {
+            background-color: #ff7043;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo">SuperMarket Plus</a>
+        </div>
+    </nav>
+
+    <div class="container login-container">
+        <h1 class="center-align" href="/">SuperMarket Plus</h1>
+        <div class="row">
+            <form class="col s12" id="loginForm" action="/auth/login" method="POST">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light" type="submit">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "banana",
-      "price": "R$ 50.00",
+      "price": "R$ 10.00",
       "stock": "1",
       "id": "1"
     },
@@ -13,13 +13,13 @@
       "id": "MpzFGi6"
     },
     {
-      "name": "carro",
+      "name": "pacote de feijão",
       "price": "R$ 25.00",
       "stock": "5",
       "id": "A1cdokm"
     },
     {
-      "name": "mawd",
+      "name": "teste",
       "price": "R$ 23.00",
       "stock": "5",
       "id": "YTGfr8a"
