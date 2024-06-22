@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "name": "banana",
+      "price": "R$ 50.00",
+      "stock": "1",
+      "id": "1"
+    },
+    {
+      "name": "pera",
+      "price": "R$ 10.00",
+      "stock": "5",
+      "id": "MpzFGi6"
+    },
+    {
+      "name": "carro",
+      "price": "R$ 25.00",
+      "stock": "5",
+      "id": "A1cdokm"
+    },
+    {
+      "name": "mawd",
+      "price": "R$ 23.00",
+      "stock": "5",
+      "id": "YTGfr8a"
+    }
+  ]
+}
