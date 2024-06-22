@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarket Plus</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #ff7043;
+            padding-top: 20px; /* Increased padding */
+            padding-bottom: 20px; /* Increased padding */
+        }
+
+        .header-content {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            color: #2d2d2d;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .header-content p {
+            color: #2d2d2d;
+            font-size: 1.2em;
+        }
+
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            align-items: center;
+        }
+
+        .content-section .text {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .content-section .image {
+            width: 50%;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #ff7043;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-content .footer-left,
+        footer .footer-content .footer-center,
+        footer .footer-content .footer-right {
+            margin: 10px;
+        }
+
+        footer .footer-content .footer-left {
+            flex: 1;
+            text-align: left;
+        }
+
+        footer .footer-content .footer-center {
+            flex: 1;
+            text-align: center;
+        }
+
+        footer .footer-content .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        footer .footer-content a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-content .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar nav-extended"> <!-- Added class "nav-extended" -->
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo">SuperMarket Plus</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container header-content">
+        <h1>Bem-vindo ao SuperMarket Plus</h1>
+        <p>Apresentamos um sistema abrangente de gerenciamento de supermercado, concebido com foco na excelência do atendimento ao cliente e na qualidade dos produtos disponibilizados.</p>
+      </div>
+
+    <div class="container content-section">
+        <div class="row">
+            <div class="col s12 m6">
+                <img class="responsive-img" src="https://img.freepik.com/fotos-premium/mulher-jovem-comprando-supermercado_432566-2544.jpg" alt="Compras no supermercado">
+            </div>
+            <div class="col s12 m6">
+                <div class="center-align">
+                    <h2>Nossa Missão</h2>
+                    <p>Proporcionar uma experiência de compra única e eficiente para nossos clientes, garantindo qualidade e variedade em nossos produtos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section">
+        <div class="row">
+            <div class="col s12 m6">
+                <img class="responsive-img" src="https://img.freepik.com/fotos-gratis/familia-no-supermercado-mulher-em-uma-camiseta-marrom-as-pessoas-escolhem-produtos-mae-com-filha_1157-43983.jpg" alt="Família no supermercado">
+            </div>
+            <div class="col s12 m6">
+                <div class="center-align">
+                    <h2>Sobre Nós</h2>
+                    <p>Somos uma empresa comprometida com a satisfação dos nossos clientes, oferecendo produtos de alta qualidade e um atendimento diferenciado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section">
+        <div class="row">
+            <div class="col s12 m6">
+                <img class="responsive-img" src="https://sarahpenido.com.br/wp-content/uploads/2023/04/layout-de-supermercado_2.webp" alt="Layout do supermercado">
+            </div>
+            <div class="col s12 m6">
+                <div class="center-align">
+                    <h2>Produtos de Qualidade</h2>
+                    <p>Trabalhamos com os melhores fornecedores para garantir que você tenha acesso aos produtos mais frescos e de maior qualidade do mercado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h5>SuperMarket Plus</h5>
+            </div>
+            <div class="footer-center">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Regras para Trocas</a>
+            </div>
+            <div class="footer-right social-icons">
+                <a href="https://www.facebook.com/grupomateusoficial" target="_blank" class="gdlr-core-social-network-icon" title="facebook" rel="noopener">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/grupomateusoficial" target="_blank" class="gdlr-core-social-network-icon" title="instagram" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/grupo-mateus/" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" rel="noopener">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/grupomateus" target="_blank" class="gdlr-core-social-network-icon" title="twitter" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/c/GrupoMateusCanal" target="_blank" class="gdlr-core-social-network-icon" title="youtube" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <p>Fone: (007) 4002-8922</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

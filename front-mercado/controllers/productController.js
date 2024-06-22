@@ -1,4 +1,4 @@
-const fetch = require('node-fetch'); // Agora deve funcionar com a versão 2.x do node-fetch
+const fetch = require('node-fetch');
 
 const API_URL = 'http://localhost:3001/products';
 
