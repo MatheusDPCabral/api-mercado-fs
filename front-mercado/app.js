@@ -9,7 +9,7 @@ var bcrypt = require('bcrypt');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-
+var clientsRouter = require('./routes/clients');
 var app = express();
 
 // view engine setup
@@ -31,6 +31,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/clients', clientsRouter);
 
 // Rota para a tela de login
 app.get('/login', (req, res) => {
