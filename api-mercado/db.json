@@ -19,10 +19,32 @@
       "id": "A1cdokm"
     },
     {
-      "name": "teste",
-      "price": "R$ 23.00",
-      "stock": "5",
-      "id": "YTGfr8a"
+      "name": "leite",
+      "price": "R$ 12.00",
+      "stock": "1",
+      "id": "cxzELtg"
+    }
+  ],
+  "clients": [
+    {
+      "name": "Vinicius",
+      "credits": "R$ 10.00",
+      "id": "1"
+    },
+    {
+      "name": "Pedro",
+      "credits": "R$ 10.00",
+      "id": "MpzFGi6"
+    },
+    {
+      "name": "Neto",
+      "credits": "R$ 25.00",
+      "id": "A1cdokm"
+    },
+    {
+      "name": "Mari",
+      "credits": "R$ 12.00",
+      "id": "cxzELtg"
     }
   ]
 }
